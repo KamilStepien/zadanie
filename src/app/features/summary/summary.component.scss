@@ -1,0 +1,49 @@
+
+
+:host {
+  width: 100%;
+
+}
+.continer {
+  min-height: 100vh;
+  background-color: rgb(239, 241, 243);
+  display: flex;
+  justify-content: center;
+
+  .continer__list {
+    margin: 30px 0;
+    grid-template-columns: 1fr 100px 100px;
+    grid-auto-rows: 30px;
+    display: grid;
+    column-gap: 30px;
+    row-gap: 20px;
+    justify-items: center;
+    align-items: center;
+
+      .element__title
+      {
+        p
+          {
+            font-size: 1.2em;
+            font-weight: 500;
+          }
+      }
+
+      .row__title
+      {
+        justify-self: left;
+        grid-column:1;
+      }
+
+      .row__editButton
+      {
+        grid-column: 2;
+      }
+
+      .row__removeButton
+      {
+        grid-column: 3;
+      }
+    }
+  }
+

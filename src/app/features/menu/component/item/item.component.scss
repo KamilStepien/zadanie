@@ -1,0 +1,137 @@
+
+$opacity_step : 0.6;
+$opacity_disable: 0.2;
+$opacity_select: 1;
+
+
+.step
+{
+  outline-style: none;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 5px 0;
+  margin:3px 0 ;
+  width:98%;
+  background-color: #eff1f3 ;
+  position: relative;
+  border-radius: 35px 0 0 35px;
+
+  .step__number
+  {
+
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #666666;
+    position: absolute;
+    left: 0;
+    p
+    {
+      color: white;
+      font-size: 1.5em;
+      font-weight: 500;
+    }
+  }
+
+  .step__name
+  {
+    padding: 0 30px 0 80px;
+
+    p
+    {
+      font-size: 1.3em;
+      font-weight: 500;
+      text-transform: uppercase;
+      opacity: $opacity_step;
+      transition: opacity cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+      white-space: nowrap;
+    }
+  }
+
+  .step__content
+  {
+    position: absolute;
+    right: 20px;
+  }
+
+  &:hover .step__name p
+  {
+    opacity: $opacity_select;
+  }
+
+}
+
+
+
+.step--disable
+{
+
+  .step__number
+  {
+    background-color: #dee1e7;
+    p
+    {
+      opacity: $opacity_disable;
+      color: rgb(0, 0, 0) ;
+    }
+  }
+
+  .step__name
+  {
+    p
+    {
+      opacity: $opacity_disable;
+    }
+  }
+
+  &:hover .step__name p
+  {
+      opacity: $opacity_disable;
+  }
+}
+
+.step--selected
+{
+  width:100%;
+
+  .step__number
+  {
+    background-color: #b11c33;
+  }
+
+  .step__name
+  {
+    p
+    {
+      opacity: $opacity_select;
+    }
+  }
+}
+
+.step--wrap
+{
+
+  width: 50px;
+  transition: width cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
+  border-radius: 35px ;
+  overflow: hidden;
+
+  .step__content
+  {
+    bottom: 10px;
+    right:4px;
+  }
+
+  &:hover
+  {
+    overflow: visible;
+    width: 300px;
+    border-radius: 35px 0 0 35px;
+  }
+
+}
+

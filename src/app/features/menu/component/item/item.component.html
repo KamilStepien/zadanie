@@ -1,0 +1,11 @@
+<div  class="step step--wrap" [ngClass] = "{'step--disable':disable && !select,'step--selected':select, 'step--wrap':wrap}">
+<div class = "step__number">
+  <p>{{digit}}</p>
+</div>
+<div class="step__name">
+<p>{{name}}</p>
+</div>
+<div class="step__content">
+  <ng-content ></ng-content>
+</div>
+</div>

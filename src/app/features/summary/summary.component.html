@@ -1,0 +1,12 @@
+<div class="continer">
+<div class="continer__list">
+    <div class="element__title"><p>Marketing name</p></div>
+    <div class="element__title"><p>Edit</p></div>
+    <div class="element__title"><p>Delete</p></div>
+  <ng-container  *ngFor="let key of d.getKeys()">
+    <div class="row__title"><p>{{d.data.get(key).marketingName }}</p></div>
+    <div class="row__editButton"><i  [routerLink]="['/definition',key]" class="fas fa-edit"></i></div>
+    <div class="row__removeButton"><i (click)="remove(key)" class="fas fa-trash-alt" ></i></div>
+  </ng-container>
+</div>
+</div>

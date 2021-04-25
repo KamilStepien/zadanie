@@ -1,0 +1,39 @@
+@import "/src/styles/components/card";
+
+.row__box {
+  width: 100%;
+
+  .box__row {
+    display: flex;
+    margin: 17px 0;
+    position: relative;
+
+    app-tooltip
+    {
+      position: absolute;
+    }
+    .row__element {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      margin: 0 15px 0 0;
+      input {
+        width: auto;
+        margin: 0 3px 0 0;
+      }
+
+      p {
+
+        white-space: nowrap;
+      }
+    }
+    .row__title
+    {
+      p {
+        color: rgb(148, 148, 148);
+      }
+    }
+  }
+
+
+}

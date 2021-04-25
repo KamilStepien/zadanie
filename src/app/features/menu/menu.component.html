@@ -1,0 +1,7 @@
+<div  class="menu"  fxLayout="column" fxLayout.sm="row" fxLayout.xs="row" >
+  <app-menu-item   [wrap]="wrapMenu$ |async"  (onSelect)="item.onClick()" [disable] = "item.disable "  [digit]="item.digit" [select]="item.select" [name]="item.name"   *ngFor="let item of ms.getElements()">
+    <app-tooltip *ngIf = "item.tooltop" [text] = "item.tooltop.text" [textOrientation] = "item.tooltop.textOrientation" ></app-tooltip>
+  </app-menu-item>
+</div>
+
+

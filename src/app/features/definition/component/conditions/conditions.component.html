@@ -1,0 +1,59 @@
+
+<div class="card">
+  <div class="card__heder">
+  <h3 class="heder__title">Conditions</h3>
+  <div class="heder__info">
+    <i class="fas fa-star-of-life"></i>
+    <p>is required</p>
+  </div>
+  </div>
+  <div class="card__hr"></div>
+  <div class="card__body">
+    <form [formGroup]="conditionForm">
+      <div class="body__row">
+        <i class="fas fa-star-of-life"></i>
+        <select class="custom-select" formControlName="portal" >
+          <option value=""  selected>Portal</option>
+          <option *ngFor="let item of a.getPortalElements()|async" [value]="item" >{{item}}</option>
+       </select>
+        <app-tooltip text= "Lorem ipsum dolor."> </app-tooltip>
+      </div>
+      <div class="body__row">
+        <i class="fas fa-star-of-life"></i>
+        <select class="custom-select" formControlName="type" >
+          <option value=""  selected>Type</option>
+          <option *ngFor="let item of a.getTypelElements()|async" [value]="item" >{{item}}</option>
+       </select>
+       <app-tooltip text= "Lorem ipsum dolor."> </app-tooltip>
+      </div>
+        <div class="body__row">
+          <div class="row__box">
+          <div class = "box__row">
+            <div class="row__element row__title"><p>Benefit amount</p></div>
+            <app-tooltip text= "Lorem ipsum dolor."> </app-tooltip>
+          </div>
+          <div class="card__hr"></div>
+          <div class="box__row" formGroupName="timePeriod" >
+            <div class="row__element"><input formControlName="start" placeholder="Start date" type="text" onfocus="(this.type='date')" onblur="(this.type='text')"/></div>
+            <div class="row__element"><input formControlName="finish" placeholder="Finish date"  type="text" onfocus="(this.type='date')" onblur="(this.type='text')"/></div>
+            <app-tooltip text= "Lorem ipsum dolor."> </app-tooltip>
+          </div>
+          <div class="box__row" >
+            <div class="row__element"><input formControlName="conditions"  type="radio" value="bussinessConditions" > <p>Bussiness conditions</p>  </div>
+            <div class="row__element"><input formControlName="conditions"  type="radio"value="basePrice" > <p>Base price 100%</p>  </div>
+            <app-tooltip text= "Lorem ipsum dolor."> </app-tooltip>
+          </div>
+          <div class="box__row">
+            <div class="row__element"><input formControlName="connectionWithPromotions"  type="checkbox" value="true" /><p>Connect with other promotions</p></div>
+            <app-tooltip text= "Lorem ipsum dolor."> </app-tooltip>
+          </div>
+          <div class="box__row">
+            <div class="row__element"><input formControlName="backPromotion" type="checkbox" value="true" /><p>Back promotion</p></div>
+            <app-tooltip text= "Lorem ipsum dolor."> </app-tooltip>
+          </div>
+          </div>
+        </div>
+    </form>
+  </div>
+
+  </div>

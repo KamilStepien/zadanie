@@ -1,0 +1,48 @@
+<div class="card">
+  <div class="card__heder">
+  <h3 class="heder__title">Description</h3>
+  <div class="heder__info">
+    <i class="fas fa-star-of-life"></i>
+    <p>is required</p>
+  </div>
+  </div>
+  <div class="card__hr"></div>
+  <div class="card__body">
+    <form [formGroup]="descriptionForm" >
+      <div class="body__row">
+        <i class="fas fa-star-of-life"></i>
+        <input type="text" placeholder="Marketing name" formControlName="marketingName">
+        <app-tooltip text= "Lorem ipsum dolor."> </app-tooltip>
+      </div>
+      <div class="body__row">
+        <input type="text" placeholder="Technical name" formControlName="technicalName">
+        <app-tooltip text= "Lorem ipsum dolor."></app-tooltip>
+      </div>
+      <div class="body__row">
+        <textarea placeholder="Description" formControlName="description"></textarea>
+        <app-tooltip text= "Lorem ipsum dolor."></app-tooltip>
+      </div>
+    </form>
+  </div>
+
+  </div>
+
+  <div class="card">
+    <div class="card__heder">
+    <h3 class="heder__title">Catolog promotion tutorial</h3>
+    </div>
+    <div class="card__hr"></div>
+    <div class="card__body">
+        <div class="body__row">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis lorem id est vulputate, ut mattis nulla dictum. In ac mauris nec turpis molestie laoreet. Duis vestibulum, velit eget venenatis mattis, enim leo tempor augue, ac pulvinar mauris purus in lorem. Cras imperdiet eu massa eget malesuada. Aenean nec elit lectus. Curabitur malesuada porta turpis, eu.
+            </p>
+        </div>
+        <div class="body__row">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis lorem id est vulputate, ut mattis nulla dictum. In ac mauris nec turpis molestie laoreet. Duis vestibulum, velit eget venenatis mattis, enim leo tempor augue, ac pulvinar mauris purus in lorem. Cras imperdiet eu massa eget malesuada. Aenean nec elit lectus. Curabitur malesuada porta turpis, eu.</p>
+        </div>
+        <div class="body__row">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis lorem id est vulputate, ut mattis nulla dictum. In ac mauris nec turpis molestie laoreet. Duis vestibulum, velit eget venenatis mattis, enim leo tempor augue, ac pulvinar mauris purus in lorem. Cras imperdiet eu massa eget malesuada. Aenean nec elit lectus. Curabitur malesuada porta turpis, eu.</p>      </div>
+
+    </div>
+
+  </div>
